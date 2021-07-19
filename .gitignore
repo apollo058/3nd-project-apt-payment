@@ -2,7 +2,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,macos,linux,zsh
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,macos,linux,zsh
 
-drip_settings.py
+my_settings.py
 csv
 db.py
 
