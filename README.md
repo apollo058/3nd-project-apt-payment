@@ -1,4 +1,4 @@
-# 3nd-project-apt-payment
+# 3rd-project-apt-payment
 
 # 아파트 현관 출입 시스템의 보고서 API
 
