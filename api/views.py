@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 
-from .serializer import AdminPaymentSerializer, PublicPaymentSerializer
+from .serializers import AdminPaymentSerializer, PublicPaymentSerializer
 from .models     import Payment
 
 from rest_framework             import generics, viewsets
@@ -14,6 +14,7 @@ class AdminPaymentViewSet(viewsets.ModelViewSet):
 class PublicPaymentList(generics.ListAPIView):
         permission_classes = [IsAuthenticated]
         serializer_class   = PublicPaymentSerializer
+        
 
         def get_queryset(self):
                 user = self.request.user

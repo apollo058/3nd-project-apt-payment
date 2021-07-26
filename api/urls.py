@@ -17,5 +17,5 @@ urlpatterns = [
     path('admin/', admin_payment_list),
     path('admin/<int:pk>', admin_payment_detail),
     path('public/', PublicPaymentList.as_view()),
-    path('api-auth/', include('rest_framework.urls'))
+    path('api-auth/', include('rest_framework.urls')),
 ]

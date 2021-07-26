@@ -1,12 +1,20 @@
-
+#################################################
+# Production Dockerfile (Dependencies, Build)   #
+#################################################
 FROM python:3.8
 
-WORKDIR /usr/src/app
+MAINTAINER SEUNGRI
 
-COPY requirements.txt ./
+WORKDIR /app/
 
-RUN pip install -r requirements.txt
+COPY requirements/ /app/requirements/
 
-COPY . .
+RUN pip install --no-cache-dir -r requirements/requirements.txt
 
-EXPOSE 8000
+COPY . /app/
+
+ARG PORT=8000
+ENV PORT $PORT
+EXPOSE $PORT 8001 8002
+
+CMD {"python", "manage.py", "runserver", "--host=0.0.0.0", "-p 8000"}
