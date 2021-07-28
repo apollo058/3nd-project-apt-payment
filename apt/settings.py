@@ -23,8 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECRET_KEY = 'django-insecure-2zdh6vdhr%eo8fx9*u=nl(_3yxa4c0#0nyh&ye%n-$wc9534#e'
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -102,8 +100,6 @@ DATABASES = {
         'PORT': os.environ.get('DB_PORT'),
     }
 }
-
-# DATABASES = DATABASES
 
 
 # Password validation
